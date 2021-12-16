@@ -1,0 +1,103 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('jess-bailey-notebook.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* common styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+#warn {
+  justify-self: flex-start;
+}
+
+/* form & result CONTAINER */
+#notebook {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  row-gap: 15px;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255);
+}
+
+/* ADDING FORM */
+form#add {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+}
+
+form#add > * {
+  font-size: 1.2rem;
+}
+
+/* inputs */
+form#add input {
+  flex-grow: 1;
+  width: 50%;
+  border: none;
+  border-bottom: 2px solid rgb(228, 228, 228);
+  padding: 10px 5px 0 0;
+  color: blueviolet;
+}
+
+form#add input:focus {
+  outline: none;
+  border-bottom-color: black;
+}
+
+/* button */
+form#add button {
+  background-color: blueviolet;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+
+/* NOTE LIST */
+ul#notes {
+  max-height: 70vh;
+  height: 70vh;
+  overflow: auto;
+}
+
+/* note list item */
+#notes li {
+  font-size: 1.2rem;
+  border-bottom: 1px solid blueviolet;
+  padding: 10px 5px;
+  padding-bottom: 0;
+}
+
+#notes li:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#notes li:nth-child(even) {
+  background-color: rgb(206, 157, 252);
+}
+
+#notes li.deleted {
+  text-decoration: line-through;
+  background-color: darkgray;
+  pointer-events: none;
+}
